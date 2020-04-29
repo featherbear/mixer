@@ -4,11 +4,14 @@ import Fader from './Fader/'
 import Label from './Label'
 
 import './ChannelStrip'
+const disp = {
+  display: 'none'
+}
 
 export default function () {
   return (
     <div className='ChannelStrip'>
-      <Button>Select</Button>
+      <Button style={disp}>Select</Button>
       <Button>GEQ</Button>
       <Button>Mute</Button>
       <Fader />
