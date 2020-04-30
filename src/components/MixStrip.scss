@@ -1,0 +1,17 @@
+@import "../ControlLayout";
+
+.MixStrip {
+  display: grid;
+  height: 100%;
+  background-color: blue;
+
+  .Bank_Main {
+    grid-area: $controlGridArea;
+  }
+  .AuxSubMatrix {
+    grid-area: $faderGridArea;
+  }
+  .Label {
+    grid-area: $labelGridArea;
+  }
+}

@@ -4,18 +4,21 @@ import Fader from './Fader/'
 import Label from './Label'
 
 import './ChannelStrip'
-const disp = {
-  display: 'none'
-}
 
-export default function () {
+export default function (props) {
   return (
-    <div className='ChannelStrip'>
-      <Button style={disp}>Select</Button>
-      <Button>GEQ</Button>
-      <Button>Mute</Button>
-      <Fader />
-      <Label>MASTER</Label>
+    <div style={props.style} className='ChannelStrip'>
+      <div className='Controls'>
+        <Button>Select</Button>
+        <Button>GEQ</Button>
+        <Button>Mute</Button>
+      </div>
+      <div className='Fader'>
+        <Fader />
+      </div>
+      <div className='Label'>
+        <Label>MASTER</Label>
+      </div>
     </div>
   )
 }

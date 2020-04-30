@@ -1,0 +1,23 @@
+.Mixer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+
+  .Buttons {
+    grid-area: 1 / 1 / 4 / 2;
+  }
+
+  .LCDs {
+    grid-area: 1 / 2 / 2 / 5;
+  }
+
+  .Channel-Strip {
+    grid-area: 2 / 2 / 4 / 9;
+  }
+
+  .Master {
+    grid-area: 2 / 9 / 4 / 10;
+  }
+}

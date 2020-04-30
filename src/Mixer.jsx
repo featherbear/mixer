@@ -1,16 +1,23 @@
 import React from 'react'
 
+import './Mixer.scss'
+
+import MixStrip from './components/MixStrip'
 import ChannelStrip from './components/ChannelStrip'
 import MasterStrip from './components/MasterStrip'
-import Button from './components/Button'
-import ButtonGroup from './components/ButtonGroup'
 
-import './Mixer.css'
+const n_physicalChannelStrips = 16
+const n_mixes = 16
 
-const channelStripsStyle = {
-  display: 'flex',
-  backgroundColor: 'red',
-  height: '100%'
+const style = {
+  channelStripContainer: {
+    display: 'flex',
+    backgroundColor: 'red',
+    height: '100%'
+  },
+  channelStrip: {
+    flexGrow: 1
+  }
 }
 
 export default class Mixer extends React.Component {
@@ -22,24 +29,23 @@ export default class Mixer extends React.Component {
 
   renderChannelStrips () {
     let elems = []
-    for (let i = 1; i <= 16; i++) {
-      elems.push(<ChannelStrip key={i} label={i}></ChannelStrip>)
+    for (let i = 1; i <= n_physicalChannelStrips; i++) {
+      elems.push(<ChannelStrip style={style.channelStrip} key={i} label={i} />)
     }
     return elems
   }
 
   render () {
     return (
-      <div className='Mixer grid-container'>
+      <div className='Mixer'>
         <div className='Buttons'>
-          <ButtonGroup>
-            <Button />
-            <Button />
-          </ButtonGroup>
+          <MixStrip />
         </div>
         <div className='LCDs'></div>
         <div className='Channel-Strip'>
-          <div style={channelStripsStyle}>{this.renderChannelStrips()}</div>
+          <div style={style.channelStripContainer}>
+            {this.renderChannelStrips()}
+          </div>
         </div>
         <div className='Master'>
           <MasterStrip />

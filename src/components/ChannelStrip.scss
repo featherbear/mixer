@@ -1,0 +1,22 @@
+@import "../ControlLayout";
+
+.ChannelStrip {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(9, 1fr);
+  height: 100%;
+  background-color: green;
+  text-align: center;
+
+  .Controls {
+    grid-area: $controlGridArea;
+  }
+
+  .Label {
+    grid-area: $labelGridArea;
+  }
+
+  .Fader {
+    grid-area: $faderGridArea;
+  }
+}

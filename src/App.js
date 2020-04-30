@@ -1,13 +1,9 @@
-import React from 'react';
-import './App.css';
-import Mixer from './Mixer';
+import React from 'react'
+import './App.css'
+import Mixer from './Mixer'
 
-function App() {
-  return (
-    <div>
-      <Mixer />
-    </div>
-  );
+function App () {
+  return <Mixer />
 }
 
-export default App;
+export default App
