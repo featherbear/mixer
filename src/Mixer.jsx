@@ -7,7 +7,7 @@ import ChannelStrip from './components/ChannelStrip'
 import MasterStrip from './components/MasterStrip'
 
 const n_physicalChannelStrips = 16
-const n_mixes = 16
+// const n_mixes = 16
 
 const style = {
   channelStripContainer: {
