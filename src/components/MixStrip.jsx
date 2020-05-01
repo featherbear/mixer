@@ -19,9 +19,12 @@ function renderMixButtons () {
 }
 
 export default function () {
-  console.log()
   return (
     <div className='MixStrip'>
+      <div className='PageSelect'>
+        {/* <Button>Prev</Button>
+        <Button>Next</Button> */}
+      </div>
       <div className='Bank_Main'>
         <ButtonGroup cols='2'>
           <Button>Inputs</Button>
@@ -29,6 +32,7 @@ export default function () {
           <Button>Mix/FX Masters</Button>
           <Button>User</Button>
         </ButtonGroup>
+        <Label>BANK</Label>
         <Button size='large'>Main Mix</Button>
       </div>
       <div className='AuxSubMatrix'>

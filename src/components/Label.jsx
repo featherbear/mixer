@@ -1,9 +1,10 @@
 import React from 'react'
 
-const style = {
-  textAlign: 'center'
-}
-
 export default function (props) {
+  const style = {
+    textAlign: 'center',
+    color: props.color || '#FFF',
+    backgroundColor: props.backgroundColor || '#000'
+  }
   return <div style={style}>{props.children}</div>
 }

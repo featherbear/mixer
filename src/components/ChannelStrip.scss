@@ -2,19 +2,23 @@
 
 .ChannelStrip {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-rows: repeat(11, 1fr);
   height: 100%;
   text-align: center;
 
-  .Controls {
-    grid-area: $controlGridArea;
+  .Header {
+    grid-area: #{$firstGridArea};
   }
 
-  .Label {
-    grid-area: $labelGridArea;
+  .Controls {
+    grid-area: #{$secondGridArea};
   }
 
   .Fader {
-    grid-area: $faderGridArea;
+    grid-area: #{$thirdGridArea};
+  }
+
+  .Label {
+    grid-area: #{$fourthGridArea};
   }
 }

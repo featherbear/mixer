@@ -41,7 +41,6 @@ export default class Mixer extends React.Component {
         <div className='Buttons'>
           <MixStrip />
         </div>
-        <div className='LCDs'></div>
         <div className='Channel-Strip'>
           <div style={style.channelStripContainer}>
             {this.renderChannelStrips()}

@@ -8,6 +8,9 @@ import './ChannelStrip'
 export default function (props) {
   return (
     <div style={props.style} className='ChannelStrip'>
+      <div className='Header'>
+        <Button size='medium'>Talk</Button>
+      </div>
       <div className='Controls'>
         <Button>Select</Button>
         <Button>GEQ</Button>

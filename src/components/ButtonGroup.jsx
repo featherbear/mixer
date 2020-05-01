@@ -1,12 +1,12 @@
 import React from 'react'
 
 export default function (props) {
-  let columns = props.cols || 1
   const style = {
     display: 'grid',
-    gridTemplateColumns: `repeat(${columns}, 1fr)`,
-    gridColumnGap: '10px',
-    gridRowGap: '10px'
+    gridTemplateColumns: `repeat(${props.cols || 1}, 1fr)`,
+    justifyItems: 'center'
+    // gridColumnGap: '5px',
+    // gridRowGap: '5px'
   }
 
   return <div style={style}>{props.children}</div>
