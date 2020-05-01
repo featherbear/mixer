@@ -22,8 +22,10 @@ export default function () {
   return (
     <div className='MixStrip'>
       <div className='PageSelect'>
-        {/* <Button>Prev</Button>
-        <Button>Next</Button> */}
+        <ButtonGroup cols='2'>
+          <Button>Prev</Button>
+          <Button>Next</Button>
+        </ButtonGroup>
       </div>
       <div className='Bank_Main'>
         <ButtonGroup cols='2'>

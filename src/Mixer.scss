@@ -2,8 +2,10 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  // grid-template-columns: repeat(8, 1fr);
+  // grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  user-select: none;
 
   .Buttons {
     grid-area: 1 / 1 / 4 / 2;
