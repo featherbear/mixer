@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Button from './Button'
-import ButtonGroup from './ButtonGroup'
-import Label from './Label'
+import Button from '../Button'
+import ButtonGroup from '../ButtonGroup'
+import Label from '../Label'
 
-import './MixStrip.scss'
+import './style.scss'
 
 function renderMixButtons () {
   // FIXME: REMOVE

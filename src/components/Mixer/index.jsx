@@ -1,10 +1,10 @@
 import React from 'react'
 
-import './Mixer.scss'
+import './style.scss'
 
-import MixStrip from './components/MixStrip'
-import ChannelStrip from './components/ChannelStrip'
-import MasterStrip from './components/MasterStrip'
+import MixStrip from './MixStrip'
+import ChannelStrip from './ChannelStrip'
+import MasterStrip from './MasterStrip'
 
 const n_physicalChannelStrips = 16
 // const n_mixes = 16

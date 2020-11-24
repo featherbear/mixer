@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from './Button'
-import Fader from './Fader/'
+import Fader from './Fader'
 import Label from './Label'
 
 import './ChannelStrip'

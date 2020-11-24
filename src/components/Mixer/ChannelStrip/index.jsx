@@ -1,11 +1,11 @@
 import React from 'react'
-import Button from './Button'
-import Fader from './Fader/'
-import VUMeter from './VUMeter'
-import Label from './Label'
-import LCD from './LCD'
+import Button from '../Button/'
+import Fader from '../Fader'
+import VUMeter from '../VUMeter'
+import Label from '../Label'
+import LCD from '../LCD'
 
-import './ChannelStrip.scss'
+import './style.scss'
 
 export default function (props) {
   return (
