@@ -26,7 +26,7 @@ export const ChannelStrip = styled.div`
     grid-area: ${controlLayout.$secondGridArea};
     display: flex;
     flex-direction: column;
-s  }
+  }
 
   .Fader {
     grid-area: ${controlLayout.$thirdGridArea};
