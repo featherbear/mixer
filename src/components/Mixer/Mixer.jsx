@@ -33,7 +33,6 @@ const n_physicalChannelStrips = 16
 const style = {
   channelStripContainer: {
     display: 'flex',
-    backgroundColor: 'green',
     height: '100%'
   },
   channelStrip: {

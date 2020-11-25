@@ -47,7 +47,7 @@ export default function (props) {
         <Button>Select</Button>
         <Button>Solo</Button>
         <Button>Mute</Button>
-        <VUMeter bars='3' />
+        <VUMeter bars={['g', 'g', 'r']} />
       </div>
       <div className='Fader'>
         <Fader />

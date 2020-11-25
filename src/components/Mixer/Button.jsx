@@ -5,18 +5,15 @@ import styled from 'styled-components'
 const sizeStyles = {
   small: {
     width: '50px',
-    height: '20px'
-    // backgroundColor: 'green'
+    height: '20px',
   },
   medium: {
     width: '60px',
-    height: '24px'
-    // backgroundColor: 'yellow'
+    height: '24px',
   },
   large: {
     width: '70px',
-    height: '28px'
-    // backgroundColor: 'red'
+    height: '28px',
   }
 }
 
@@ -34,7 +31,7 @@ const Button = styled.div`
   line-height: 14px;
   border-radius: 5px;
 
-  background-color: rgba(0, 255, 255, 0.5);
+  background-color: hsla(0, 0%, 90%, 1);
 `
 
 export default function (props) {
