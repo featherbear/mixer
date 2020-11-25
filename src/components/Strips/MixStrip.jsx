@@ -52,63 +52,59 @@ const ButtonWithContextHOF = (subscribe, provide, value, props) => (
 )
 
 export default function () {
-  const [currentMix, setCurrentMix] = React.useState(mixEnum.MAIN)
-  const [currentFaderView, setCurrentFaderView] = React.useState(
-    faderViewEnum.Inputs
+  let [currentMix, setCurrentMix] = React.useContext(currentMixContext)
+  let [currentFaderView, setCurrentFaderView] = React.useContext(
+    currentFaderViewContext
   )
 
   return (
-    <currentFaderViewContext.Provider value={currentFaderView}>
-      <currentMixContext.Provider value={currentMix}>
-        <MixStrip>
-          <div className='PageSelect'>
-            <ButtonGroup cols={2} style={{ width: '100%' }}>
-              <Button>Prev</Button>
-              <Button>Next</Button>
-            </ButtonGroup>
-          </div>
-          <div className='Bank_Main'>
-            <ButtonGroup cols={2}>
-              {Object.entries(faderViewEnum).map(([key, v]) =>
-                ButtonWithContextHOF(currentFaderView, setCurrentFaderView, v, {
-                  key
-                })
-              )}
-            </ButtonGroup>
-            <Label style={{ marginTop: 8, marginBottom: 8 }}>BANK</Label>
-            <div
-              style={{
-                flexGrow: 1,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center'
-              }}
-            >
-              {ButtonWithContextHOF(currentMix, setCurrentMix, mixEnum.MAIN, {
-                size: 'large'
-              })}
-            </div>
-          </div>
-          <div className='AuxSubMatrix'>
-            <Label>Aux/Sub/Matrix</Label>
-            <ButtonGroup cols={2}>
-              {Object.entries(mixEnum.AUX).map(([key, v]) =>
-                ButtonWithContextHOF(currentMix, setCurrentMix, v, {
-                  key
-                })
-              )}
-            </ButtonGroup>
-            <ButtonGroup cols={2}>
-              {Object.entries(mixEnum.FX).map(([key, v]) =>
-                ButtonWithContextHOF(currentMix, setCurrentMix, v, { key })
-              )}
-            </ButtonGroup>
-          </div>
-          <div>
-            <Label>MIX SELECT</Label>
-          </div>
-        </MixStrip>
-      </currentMixContext.Provider>
-    </currentFaderViewContext.Provider>
+    <MixStrip>
+      <div className='PageSelect'>
+        <ButtonGroup cols={2} style={{ width: '100%' }}>
+          <Button>Prev</Button>
+          <Button>Next</Button>
+        </ButtonGroup>
+      </div>
+      <div className='Bank_Main'>
+        <ButtonGroup cols={2}>
+          {Object.entries(faderViewEnum).map(([key, v]) =>
+            ButtonWithContextHOF(currentFaderView, setCurrentFaderView, v, {
+              key
+            })
+          )}
+        </ButtonGroup>
+        <Label style={{ marginTop: 8, marginBottom: 8 }}>BANK</Label>
+        <div
+          style={{
+            flexGrow: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          {ButtonWithContextHOF(currentMix, setCurrentMix, mixEnum.MAIN, {
+            size: 'large'
+          })}
+        </div>
+      </div>
+      <div className='AuxSubMatrix'>
+        <Label>Aux/Sub/Matrix</Label>
+        <ButtonGroup cols={2}>
+          {Object.entries(mixEnum.AUX).map(([key, v]) =>
+            ButtonWithContextHOF(currentMix, setCurrentMix, v, {
+              key
+            })
+          )}
+        </ButtonGroup>
+        <ButtonGroup cols={2}>
+          {Object.entries(mixEnum.FX).map(([key, v]) =>
+            ButtonWithContextHOF(currentMix, setCurrentMix, v, { key })
+          )}
+        </ButtonGroup>
+      </div>
+      <div>
+        <Label>MIX SELECT</Label>
+      </div>
+    </MixStrip>
   )
 }

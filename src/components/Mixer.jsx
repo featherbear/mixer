@@ -4,6 +4,11 @@ import MixStrip from './Strips/MixStrip'
 import ChannelStrip from './Strips/ChannelStrip'
 import MasterStrip from './Strips/MasterStrip'
 
+import currentMixContext from '../data/currentMixContext'
+import currentFaderViewContext from '../data/currentFaderViewContext'
+import faderViewEnum from '../data/faderViewEnum'
+import * as mixEnum from '../data/mixEnum'
+
 import styled from 'styled-components'
 const MixerComponent = styled.div`
   height: 100%;
@@ -49,19 +54,30 @@ function renderChannelStrips () {
 }
 
 export default function (props) {
+  let [currentMix, setCurrentMix] = React.useState(mixEnum.MAIN)
+  let [currentFaderView, setCurrentFaderView] = React.useState(
+    faderViewEnum.Inputs
+  )
+
   return (
-    <MixerComponent>
-      <div className='Buttons'>
-        <MixStrip />
-      </div>
-      <div className='Channel-Strip'>
-        <div style={style.channelStripContainer}>
-          {renderChannelStrips()}
-        </div>
-      </div>
-      <div className='Master'>
-        <MasterStrip />
-      </div>
-    </MixerComponent>
+    <currentFaderViewContext.Provider
+      value={[currentFaderView, setCurrentFaderView]}
+    >
+      <currentMixContext.Provider value={[currentMix, setCurrentMix]}>
+        <MixerComponent>
+          <div className='Buttons'>
+            <MixStrip />
+          </div>
+          <div className='Channel-Strip'>
+            <div style={style.channelStripContainer}>
+              {renderChannelStrips()}
+            </div>
+          </div>
+          <div className='Master'>
+            <MasterStrip />
+          </div>
+        </MixerComponent>
+      </currentMixContext.Provider>
+    </currentFaderViewContext.Provider>
   )
 }
