@@ -1,10 +1,32 @@
 import React from 'react'
 
-import Button from '../Button'
-import ButtonGroup from '../ButtonGroup'
-import Label from '../Label'
+import Button from './Button'
+import ButtonGroup from './ButtonGroup'
+import Label from './Label'
 
-import './style.scss'
+import styled from 'styled-components'
+import controlLayout from '../../ControlLayout'
+const MixStrip = styled.div`
+  display: grid;
+  grid-template-rows: repeat(11, 1fr);
+  height: 100%;
+
+  .PageSelect {
+    grid-area: ${controlLayout.firstGridArea};
+  }
+
+  .Bank_Main {
+    grid-area: ${controlLayout.secondGridArea};
+  }
+
+  .AuxSubMatrix {
+    grid-area: ${controlLayout.thirdGridArea};
+  }
+
+  .Label {
+    grid-area: ${controlLayout.fourthGridArea};
+  }
+`
 
 function renderMixButtons () {
   // FIXME: REMOVE
@@ -20,7 +42,7 @@ function renderMixButtons () {
 
 export default function () {
   return (
-    <div className='MixStrip'>
+    <MixStrip>
       <div className='PageSelect'>
         <ButtonGroup cols='2'>
           <Button>Prev</Button>
@@ -50,6 +72,6 @@ export default function () {
       <div className=''>
         <Label>MIX SELECT</Label>
       </div>
-    </div>
+    </MixStrip>
   )
 }

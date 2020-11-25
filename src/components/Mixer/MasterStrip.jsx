@@ -3,11 +3,11 @@ import Button from './Button'
 import Fader from './Fader'
 import Label from './Label'
 
-import './ChannelStrip'
+import { ChannelStrip } from './ChannelStrip'
 
 export default function (props) {
   return (
-    <div style={props.style} className='ChannelStrip'>
+    <ChannelStrip style={props.style}>
       <div className='Header'>
         <Button size='medium'>Talk</Button>
       </div>
@@ -22,6 +22,6 @@ export default function (props) {
       <div className='Label'>
         <Label>MASTER</Label>
       </div>
-    </div>
+    </ChannelStrip>
   )
 }

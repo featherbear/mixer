@@ -1,6 +1,10 @@
 import React from 'react'
 
-import './style.scss'
+import styled from 'styled-components'
+const VUMeter = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 export default function (props) {
   let elems = []
@@ -8,5 +12,5 @@ export default function (props) {
     elems.push(<button key={i + 1} />)
   }
 
-  return <div class="VUMeter">{elems}</div>
+  return <VUMeter>{elems}</VUMeter>
 }

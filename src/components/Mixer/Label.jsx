@@ -1,10 +1,12 @@
 import React from 'react'
 
+import styled from 'styled-components'
+
 export default function (props) {
-  const style = {
-    textAlign: 'center',
-    color: props.color || '#FFF',
-    backgroundColor: props.backgroundColor || '#000'
-  }
-  return <div style={style}>{props.children}</div>
+  const Label = styled.div`
+    text-align: center;
+    color: ${props.color || '#FFF'};
+    background-color: ${props.backgroundColor || '#000'};
+  `
+  return <Label>{props.children}</Label>
 }
