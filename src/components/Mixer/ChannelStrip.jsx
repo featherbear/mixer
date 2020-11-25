@@ -17,11 +17,16 @@ export const ChannelStrip = styled.div`
 
   .Header {
     grid-area: ${controlLayout.$firstGridArea};
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .Controls {
-    grid-area: ${controlLayout.secondGridArea};
-  }
+    grid-area: ${controlLayout.$secondGridArea};
+    display: flex;
+    flex-direction: column;
+s  }
 
   .Fader {
     grid-area: ${controlLayout.$thirdGridArea};

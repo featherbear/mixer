@@ -9,7 +9,6 @@ export default function (props) {
     justify-items: center;
     grid-column-gap: 5px;
     padding: 0 5px;
-    // gridRowGap: 5px;
   `
 
   return <ButtonGroup style={{ ...props.style }}>{props.children}</ButtonGroup>

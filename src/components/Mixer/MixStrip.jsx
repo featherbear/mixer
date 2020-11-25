@@ -12,19 +12,22 @@ const MixStrip = styled.div`
   height: 100%;
 
   .PageSelect {
-    grid-area: ${controlLayout.firstGridArea};
+    grid-area: ${controlLayout.$firstGridArea};
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .Bank_Main {
-    grid-area: ${controlLayout.secondGridArea};
+    grid-area: ${controlLayout.$secondGridArea};
   }
 
   .AuxSubMatrix {
-    grid-area: ${controlLayout.thirdGridArea};
+    grid-area: ${controlLayout.$thirdGridArea};
   }
 
   .Label {
-    grid-area: ${controlLayout.fourthGridArea};
+    grid-area: ${controlLayout.$fourthGridArea};
   }
 `
 
@@ -44,13 +47,13 @@ export default function () {
   return (
     <MixStrip>
       <div className='PageSelect'>
-        <ButtonGroup cols='2'>
+        <ButtonGroup cols={2} style={{ width: '100%' }}>
           <Button>Prev</Button>
           <Button>Next</Button>
         </ButtonGroup>
       </div>
       <div className='Bank_Main'>
-        <ButtonGroup cols='2'>
+        <ButtonGroup cols={2}>
           <Button>Inputs</Button>
           <Button>DCA Groups</Button>
           <Button>Mix/FX Masters</Button>
@@ -62,7 +65,7 @@ export default function () {
       <div className='AuxSubMatrix'>
         <Label>Aux/Sub/Matrix</Label>
         {renderMixButtons()}
-        <ButtonGroup cols='2'>
+        <ButtonGroup cols={2}>
           <Button>FX A</Button>
           <Button>FX B</Button>
           <Button>FX C</Button>
