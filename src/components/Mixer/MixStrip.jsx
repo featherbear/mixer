@@ -20,10 +20,14 @@ const MixStrip = styled.div`
 
   .Bank_Main {
     grid-area: ${controlLayout.$secondGridArea};
+    display: flex;
+    flex-direction: column;
   }
 
   .AuxSubMatrix {
     grid-area: ${controlLayout.$thirdGridArea};
+    margin: 0 auto;
+    width: 95%;
   }
 
   .Label {
@@ -59,8 +63,17 @@ export default function () {
           <Button>Mix/FX Masters</Button>
           <Button>User</Button>
         </ButtonGroup>
-        <Label>BANK</Label>
-        <Button size='large'>Main Mix</Button>
+        <Label style={{ marginTop: 8, marginBottom: 8 }}>BANK</Label>
+        <div
+          style={{
+            flexGrow: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <Button size='large'>Main Mix</Button>
+        </div>
       </div>
       <div className='AuxSubMatrix'>
         <Label>Aux/Sub/Matrix</Label>
@@ -72,7 +85,7 @@ export default function () {
           <Button>FX D</Button>
         </ButtonGroup>
       </div>
-      <div className=''>
+      <div>
         <Label>MIX SELECT</Label>
       </div>
     </MixStrip>

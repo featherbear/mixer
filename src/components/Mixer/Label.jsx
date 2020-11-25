@@ -9,5 +9,5 @@ const Label = styled.div`
 `
 
 export default function (props) {
-  return <Label color={props.color} backgroundColor={props.backgroundColor} >{props.children}</Label>
+  return <Label color={props.color} backgroundColor={props.backgroundColor} style={props.style}>{props.children}</Label>
 }
