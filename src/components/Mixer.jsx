@@ -1,8 +1,8 @@
 import React from 'react'
 
-import MixStrip from './MixStrip'
-import ChannelStrip from './ChannelStrip'
-import MasterStrip from './MasterStrip'
+import MixStrip from './Strips/MixStrip'
+import ChannelStrip from './Strips/ChannelStrip'
+import MasterStrip from './Strips/MasterStrip'
 
 import styled from 'styled-components'
 const MixerComponent = styled.div`

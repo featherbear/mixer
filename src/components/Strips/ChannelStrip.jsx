@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Button from './Button'
+import Button from '../../blocks/Button'
 import Fader from './Fader'
-import VUMeter from './VUMeter'
-import Label from './Label'
-import LCD from './LCD'
+import VUMeter from '../../blocks/VUMeter'
+import Label from '../../blocks/Label'
+import LCD from '../../blocks/LCD'
 
 import styled from 'styled-components'
 import controlLayout from '../../ControlLayout'

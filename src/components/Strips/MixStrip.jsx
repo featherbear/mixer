@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Button from './Button'
-import ButtonGroup from './ButtonGroup'
-import Label from './Label'
+import Button from '../../blocks/Button'
+import ButtonGroup from '../../blocks/ButtonGroup'
+import Label from '../../blocks/Label'
 
 import styled from 'styled-components'
 import controlLayout from '../../ControlLayout'

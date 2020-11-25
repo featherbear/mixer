@@ -1,7 +1,7 @@
 import React from 'react'
-import Button from './Button'
+import Button from '../../blocks/Button'
 import Fader from './Fader'
-import Label from './Label'
+import Label from '../../blocks/Label'
 
 import { ChannelStrip } from './ChannelStrip'
 

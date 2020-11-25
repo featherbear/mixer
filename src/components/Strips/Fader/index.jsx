@@ -30,14 +30,14 @@ const StyledTrack = styled.div`
   border-radius: 999px;
 `
 
-const StyledMark = styled.div`
-  // left: 0;
-  // right: 0;
-`
+// const StyledMark = styled.div`
+  // // left: 0;
+  // // right: 0;
+// `
 
 const Track = (props, state) => <StyledTrack {...props} index={state.index} />
 const Thumb = (props, state) => <StyledThumb {...props} />
-const Mark = (props, state) => <StyledMark {...props}>{props.key}</StyledMark>
+// const Mark = (props, state) => <StyledMark {...props}>{props.key}</StyledMark>
 
 export default function () {
   return (
